@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #f1ab69, #edf04e);
+    font-family: 'Arial', sans-serif;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+#birthday-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in;
+}
+
+#message {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 1rem;
+    margin: 0;
+    word-wrap: break-word;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    #message {
+        font-size: 1.8rem;
+        padding: 0.5rem;
+    }
+
+    #birthday-image {
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        padding: 0.5rem;
+    }
+
+    #message {
+        font-size: 1.4rem;
+    }
+
+    #birthday-image {
+        max-width: 200px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

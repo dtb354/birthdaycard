@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <div class="card">
+        <img src="img/birthday-image.webp" alt="Birthday Picture" id="birthday-image">
+        <h1 id="message"></h1>
+    </div>
+<script>
+const msg = "Happy birthday, Hugo, my darling! 💖 I’m so lucky to have you. You have made my world so beautiful 🥹💞 I love you so so much and I hope you have a beautiful birthday!";
+let i = 0;
+function typeWriter() {
+  if (i < msg.length) {
+    document.getElementById("message").innerHTML += msg.charAt(i);
+    i++;
+    setTimeout(typeWriter, 80);
+  }
+}
+window.onload = typeWriter;
+</script>
+    
+</body>
+</html>
